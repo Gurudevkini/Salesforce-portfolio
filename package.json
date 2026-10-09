@@ -1,0 +1,17 @@
+{
+  "name": "gurudev-kini-salesforce-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Salesforce Experience Cloud (LWR) developer portfolio built with Lightning Web Components.",
+  "scripts": {
+    "test": "sfdx-lwc-jest",
+    "test:watch": "sfdx-lwc-jest --watch",
+    "test:coverage": "sfdx-lwc-jest --coverage",
+    "format": "prettier --write \"force-app/**/*.{js,html,css,cls}\"",
+    "format:check": "prettier --check \"force-app/**/*.{js,html,css}\""
+  },
+  "devDependencies": {
+    "@salesforce/sfdx-lwc-jest": "^7.0.1",
+    "prettier": "^3.3.3"
+  }
+}

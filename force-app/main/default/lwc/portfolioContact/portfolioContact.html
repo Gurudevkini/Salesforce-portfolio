@@ -1,0 +1,96 @@
+<template>
+    <section class="section" aria-labelledby="contact-title">
+        <div class="container grid">
+            <div class="side">
+                <h2 id="contact-title" class="title">Contact</h2>
+            </div>
+
+            <div class="body">
+                <p class="lead">{intro}</p>
+
+                <ul class="channels">
+                    <li class="channel">
+                        <c-portfolio-icon name="mail" size="lg"></c-portfolio-icon>
+                        <a lwc:if={hasEmail} class="link" href={emailHref}>{emailText}</a>
+                        <span lwc:else class="placeholder">{emailText}</span>
+                    </li>
+                    <li class="channel">
+                        <c-portfolio-icon name="github" size="lg"></c-portfolio-icon>
+                        <a class="link" href={githubUrl} target="_blank" rel="noopener">GitHub</a>
+                    </li>
+                    <li class="channel">
+                        <c-portfolio-icon name="linkedin" size="lg"></c-portfolio-icon>
+                        <a class="link" href={linkedinUrl} target="_blank" rel="noopener"
+                            >LinkedIn</a
+                        >
+                    </li>
+                </ul>
+
+                <form class="form" onsubmit={handleSubmit} aria-label="Contact form">
+                    <div class="row">
+                        <label class="field">
+                            <span class="label">Name</span>
+                            <input
+                                type="text"
+                                name="senderName"
+                                autocomplete="name"
+                                maxlength="80"
+                                required
+                                oninput={handleInput}
+                            />
+                        </label>
+                        <label class="field">
+                            <span class="label">Email</span>
+                            <input
+                                type="email"
+                                name="senderEmail"
+                                autocomplete="email"
+                                maxlength="254"
+                                required
+                                oninput={handleInput}
+                            />
+                        </label>
+                    </div>
+
+                    <label class="field">
+                        <span class="label">Subject (optional)</span>
+                        <input type="text" name="subject" maxlength="150" oninput={handleInput} />
+                    </label>
+
+                    <label class="field">
+                        <span class="label">Message</span>
+                        <textarea
+                            name="message"
+                            rows="6"
+                            maxlength="5000"
+                            required
+                            oninput={handleInput}
+                        ></textarea>
+                    </label>
+
+                    <!-- Honeypot: invisible to people, tempting to bots. -->
+                    <label class="trap" aria-hidden="true">
+                        Website
+                        <input
+                            type="text"
+                            name="website"
+                            tabindex="-1"
+                            autocomplete="off"
+                            oninput={handleInput}
+                        />
+                    </label>
+
+                    <div class="submit-row">
+                        <button class="btn btn-primary" type="submit" disabled={isSubmitting}>
+                            <c-portfolio-icon name="send"></c-portfolio-icon>
+                            {submitLabel}
+                        </button>
+                        <div role="status" aria-live="polite">
+                            <p lwc:if={status} class={statusClass}>{status.message}</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</template>

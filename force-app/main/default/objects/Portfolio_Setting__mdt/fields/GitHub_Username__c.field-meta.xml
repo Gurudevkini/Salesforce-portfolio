@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GitHub_Username__c</fullName>
+    <description>GitHub account shown in the GitHub section.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>GitHub Username</label>
+    <length>39</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

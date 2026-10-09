@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Portfolio_Name</fullName>
+        <categories>Portfolio</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Portfolio owner name</shortDescription>
+        <value>Gurudev Kini</value>
+    </labels>
+    <labels>
+        <fullName>Portfolio_Role</fullName>
+        <categories>Portfolio</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Portfolio headline role</shortDescription>
+        <value>Software Developer</value>
+    </labels>
+    <labels>
+        <fullName>Portfolio_Tagline</fullName>
+        <categories>Portfolio</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Hero tagline</shortDescription>
+        <value>Computer Science Engineer building scalable web applications, AI-powered products and systems-oriented projects.</value>
+    </labels>
+    <labels>
+        <fullName>Portfolio_Email</fullName>
+        <categories>Portfolio</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Public contact email (replace placeholder)</shortDescription>
+        <value>[ADD EMAIL ADDRESS]</value>
+    </labels>
+    <labels>
+        <fullName>Portfolio_LinkedIn_Url</fullName>
+        <categories>Portfolio</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LinkedIn profile URL</shortDescription>
+        <value>https://www.linkedin.com/in/gurudev-kini-0a01632a4/</value>
+    </labels>
+    <labels>
+        <fullName>Portfolio_GitHub_Url</fullName>
+        <categories>Portfolio</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GitHub profile URL</shortDescription>
+        <value>https://github.com/Gurudevkini</value>
+    </labels>
+    <labels>
+        <fullName>Portfolio_Contact_Success</fullName>
+        <categories>Portfolio</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact form success message</shortDescription>
+        <value>Thanks for reaching out. Your message has been received and I will reply soon.</value>
+    </labels>
+    <labels>
+        <fullName>Portfolio_Contact_Error</fullName>
+        <categories>Portfolio</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact form generic error</shortDescription>
+        <value>Your message could not be sent. Please try again or use the email or LinkedIn links.</value>
+    </labels>
+    <labels>
+        <fullName>Portfolio_Contact_Rate_Limit</fullName>
+        <categories>Portfolio</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact form rate-limit message</shortDescription>
+        <value>Too many messages from this address. Please try again later.</value>
+    </labels>
+</CustomLabels>

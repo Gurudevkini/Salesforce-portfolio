@@ -1,0 +1,23 @@
+<template>
+    <section class="section" aria-labelledby="skills-title">
+        <div class="container grid">
+            <div class="side">
+                <h2 id="skills-title" class="title">Skills</h2>
+            </div>
+            <dl class="groups">
+                <template for:each={groups} for:item="group">
+                    <div key={group.id} class="group">
+                        <dt>{group.label}</dt>
+                        <dd>
+                            <ul class="items">
+                                <template for:each={group.items} for:item="item">
+                                    <li key={item.key} class="skill">{item.label}</li>
+                                </template>
+                            </ul>
+                        </dd>
+                    </div>
+                </template>
+            </dl>
+        </div>
+    </section>
+</template>

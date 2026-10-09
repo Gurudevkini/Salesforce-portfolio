@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GitHub_Max_Repos__c</fullName>
+    <description>Maximum number of repositories to show (1-12).</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>GitHub Max Repos</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

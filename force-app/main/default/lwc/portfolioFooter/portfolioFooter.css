@@ -1,0 +1,50 @@
+@import 'c/portfolioTheme';
+
+.footer {
+    border-top: 1px solid var(--rule);
+    padding: 28px 0 36px;
+    background: var(--bg);
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.copy {
+    max-width: 60ch;
+    color: var(--subtle);
+    font-size: 0.875rem;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--ink);
+}
+
+.top {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .bar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

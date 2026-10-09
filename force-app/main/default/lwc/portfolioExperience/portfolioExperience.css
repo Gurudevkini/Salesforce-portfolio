@@ -1,0 +1,128 @@
+@import 'c/portfolioTheme';
+
+.note {
+    margin-top: 8px;
+    color: var(--subtle);
+    font-size: 0.9375rem;
+}
+
+.list {
+    border-top: 1px solid var(--rule);
+}
+
+.item {
+    border-bottom: 1px solid var(--rule);
+}
+
+.item-head {
+    font: inherit;
+}
+
+.trigger {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px 16px;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
+    padding: 20px 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.period {
+    grid-column: 1 / -1;
+    color: var(--subtle);
+    font-size: 0.8125rem;
+}
+
+.what {
+    display: grid;
+}
+
+.role {
+    font-size: 1.0625rem;
+    font-weight: 650;
+}
+
+.org {
+    color: var(--muted);
+    font-size: 0.9375rem;
+}
+
+.chevron {
+    color: var(--subtle);
+    transition: transform 0.2s ease;
+}
+
+.chevron.open {
+    transform: rotate(180deg);
+}
+
+.trigger:hover .role {
+    color: var(--accent);
+}
+
+.points {
+    display: grid;
+    gap: 8px;
+    padding: 0 0 24px;
+    max-width: 62ch;
+    color: var(--muted);
+    animation: reveal 0.2s ease;
+}
+
+.point {
+    position: relative;
+    padding-left: 18px;
+}
+
+.point::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 8px;
+    height: 1px;
+    background: var(--subtle);
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .points {
+        animation: none;
+    }
+
+    .chevron {
+        transition: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .trigger {
+        grid-template-columns: 180px minmax(0, 1fr) auto;
+        gap: 0 24px;
+    }
+
+    .period {
+        grid-column: auto;
+    }
+
+    .points {
+        padding-left: 204px;
+    }
+}

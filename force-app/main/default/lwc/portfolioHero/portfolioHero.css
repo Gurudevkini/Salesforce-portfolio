@@ -1,0 +1,165 @@
+@import 'c/portfolioTheme';
+
+.hero {
+    padding: 48px 0 64px;
+    background: var(--bg);
+}
+
+.layout {
+    display: grid;
+    gap: 40px;
+    align-items: center;
+}
+
+.status {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.name {
+    font-size: clamp(2.5rem, 1.6rem + 4.5vw, 4.5rem);
+    font-weight: 750;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+}
+
+.role {
+    margin-top: 12px;
+    color: var(--accent);
+    font-size: clamp(1.125rem, 1rem + 0.7vw, 1.5rem);
+    font-weight: 600;
+}
+
+.tagline {
+    max-width: 52ch;
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    color: var(--muted);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: var(--ink);
+}
+
+.focus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    color: var(--subtle);
+    font-size: 0.875rem;
+}
+
+.portrait {
+    max-width: 320px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 6 / 7;
+    object-fit: cover;
+}
+
+/* One orchestrated entrance on load; nothing else on the page animates by itself. */
+.rise {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: rise 0.6s ease forwards;
+}
+
+.r1 {
+    animation-delay: 0.05s;
+}
+.r2 {
+    animation-delay: 0.12s;
+}
+.r3 {
+    animation-delay: 0.2s;
+}
+.r4 {
+    animation-delay: 0.28s;
+}
+.r5 {
+    animation-delay: 0.36s;
+}
+
+@keyframes rise {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rise {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+}
+
+@media (min-width: 900px) {
+    .hero {
+        padding: 96px 0 112px;
+    }
+
+    .layout {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 72px;
+    }
+
+    .portrait {
+        justify-self: end;
+    }
+}
+
+@media (max-width: 899px) {
+    .portrait {
+        max-width: 240px;
+        order: -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta .btn {
+        flex: 1 1 100%;
+    }
+}

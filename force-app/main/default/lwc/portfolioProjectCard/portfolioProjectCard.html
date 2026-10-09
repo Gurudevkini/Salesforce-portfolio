@@ -1,0 +1,54 @@
+<template>
+    <article lwc:if={project} class={rowClass}>
+        <header class="head">
+            <h3 class="name">{project.title}</h3>
+            <p class="kind">{project.kind}</p>
+        </header>
+
+        <div class="result">
+            <p class={resultClass}>{project.result.value}</p>
+            <p class="result-label">{project.result.label}</p>
+        </div>
+
+        <div class="main">
+            <p class="summary">{project.summary}</p>
+
+            <ul class="points">
+                <template for:each={highlights} for:item="point">
+                    <li key={point.key} class={point.className}>{point.text}</li>
+                </template>
+            </ul>
+
+            <ul class="stack" aria-label="Technologies">
+                <template for:each={stack} for:item="tech">
+                    <li key={tech.key} class="tag">{tech.label}</li>
+                </template>
+            </ul>
+
+            <div lwc:if={hasLinks} class="links">
+                <a
+                    lwc:if={liveUrl}
+                    class="link"
+                    href={liveUrl}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={liveLabel}
+                >
+                    Live demo
+                    <c-portfolio-icon name="external" size="sm"></c-portfolio-icon>
+                </a>
+                <a
+                    lwc:if={githubUrl}
+                    class="link"
+                    href={githubUrl}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={githubLabel}
+                >
+                    <c-portfolio-icon name="github" size="sm"></c-portfolio-icon>
+                    Source code
+                </a>
+            </div>
+        </div>
+    </article>
+</template>

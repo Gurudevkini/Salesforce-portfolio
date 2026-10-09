@@ -1,0 +1,69 @@
+<template>
+    <header class={headerClass} onkeydown={handleKeydown}>
+        <div class="container bar">
+            <a class="brand" href="#top" onclick={handleBrandClick} aria-label="Back to top">
+                <span class="mark" aria-hidden="true">GK</span>
+                <span class="brand-name">{profile.name}</span>
+            </a>
+
+            <nav class="nav-desktop" aria-label="Primary">
+                <template for:each={links} for:item="link">
+                    <a
+                        key={link.id}
+                        class={link.className}
+                        href={link.href}
+                        data-id={link.id}
+                        aria-current={link.ariaCurrent}
+                        onclick={handleNavClick}
+                        >{link.label}</a
+                    >
+                </template>
+            </nav>
+
+            <div class="actions">
+                <a
+                    class="btn btn-outline btn-sm resume"
+                    href={profile.resumeUrl}
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Resume
+                </a>
+                <button
+                    class="menu-btn"
+                    type="button"
+                    aria-label={menuLabel}
+                    aria-expanded={menuExpanded}
+                    onclick={toggleMenu}
+                >
+                    <c-portfolio-icon name={menuIcon} size="lg"></c-portfolio-icon>
+                </button>
+            </div>
+        </div>
+
+        <nav lwc:if={menuOpen} class="mobile-panel" aria-label="Mobile">
+            <div class="container">
+                <template for:each={links} for:item="link">
+                    <a
+                        key={link.id}
+                        class={link.className}
+                        href={link.href}
+                        data-id={link.id}
+                        aria-current={link.ariaCurrent}
+                        onclick={handleNavClick}
+                        >{link.label}</a
+                    >
+                </template>
+                <a
+                    class="btn btn-primary mobile-resume"
+                    href={profile.resumeUrl}
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <c-portfolio-icon name="download"></c-portfolio-icon>
+                    Download Resume
+                </a>
+            </div>
+        </nav>
+    </header>
+</template>

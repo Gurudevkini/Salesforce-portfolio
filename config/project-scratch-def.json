@@ -1,0 +1,13 @@
+{
+  "orgName": "Gurudev Kini Portfolio",
+  "edition": "Developer",
+  "features": ["Communities"],
+  "settings": {
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    },
+    "experienceBundleSettings": {
+      "enableExperienceBundleMetadata": true
+    }
+  }
+}

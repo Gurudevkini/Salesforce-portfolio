@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/zip</contentType>
+    <description>Portfolio assets: resume PDF and profile image. Replace the files inside, keep the file names.</description>
+</StaticResource>

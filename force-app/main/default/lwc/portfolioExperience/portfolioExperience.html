@@ -1,0 +1,38 @@
+<template>
+    <section class="section" aria-labelledby="involvement-title">
+        <div class="container grid">
+            <div class="side">
+                <h2 id="involvement-title" class="title">Involvement</h2>
+                <p class="note">Leadership, coordination and community work.</p>
+            </div>
+            <ul class="list">
+                <template for:each={items} for:item="item">
+                    <li key={item.id} class="item">
+                        <h3 class="item-head">
+                            <button
+                                class="trigger"
+                                type="button"
+                                data-id={item.id}
+                                aria-expanded={item.ariaExpanded}
+                                onclick={handleToggle}
+                            >
+                                <span class="period">{item.period}</span>
+                                <span class="what">
+                                    <span class="role">{item.role}</span>
+                                    <span class="org">{item.org}</span>
+                                </span>
+                                <c-portfolio-icon class={item.chevronClass} name="chevron">
+                                </c-portfolio-icon>
+                            </button>
+                        </h3>
+                        <ul lwc:if={item.expanded} class="points">
+                            <template for:each={item.points} for:item="point">
+                                <li key={point.key} class="point">{point.text}</li>
+                            </template>
+                        </ul>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </section>
+</template>

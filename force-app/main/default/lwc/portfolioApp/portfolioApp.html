@@ -1,0 +1,32 @@
+<template>
+    <a class="skip" href="#main" onclick={handleSkip}>Skip to content</a>
+
+    <c-portfolio-navbar active-section={activeSection} onnavigate={handleNavigate}>
+    </c-portfolio-navbar>
+
+    <main id="main" class="main" tabindex="-1">
+        <div class="anchor" data-section="top">
+            <c-portfolio-hero onnavigate={handleNavigate}></c-portfolio-hero>
+        </div>
+        <div class="anchor" data-section="about">
+            <c-portfolio-about></c-portfolio-about>
+        </div>
+        <div class="anchor" data-section="projects">
+            <c-portfolio-projects></c-portfolio-projects>
+        </div>
+        <div class="anchor" data-section="github">
+            <c-portfolio-github></c-portfolio-github>
+        </div>
+        <div class="anchor" data-section="involvement">
+            <c-portfolio-experience></c-portfolio-experience>
+        </div>
+        <div class="anchor" data-section="skills">
+            <c-portfolio-skills></c-portfolio-skills>
+        </div>
+        <div class="anchor" data-section="contact">
+            <c-portfolio-contact></c-portfolio-contact>
+        </div>
+    </main>
+
+    <c-portfolio-footer onnavigate={handleNavigate}></c-portfolio-footer>
+</template>

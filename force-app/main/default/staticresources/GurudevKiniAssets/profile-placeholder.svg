@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-label="Gurudev Kini monogram">
+  <rect width="480" height="560" fill="#e6eaf0"/>
+  <rect x="0" y="420" width="480" height="140" fill="#d4dbe5"/>
+  <circle cx="240" cy="228" r="84" fill="#aab6c6"/>
+  <path d="M82 560c0-96 70-168 158-168s158 72 158 168z" fill="#aab6c6"/>
+  <text x="240" y="520" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="30" font-weight="600" fill="#445066">GK</text>
+</svg>

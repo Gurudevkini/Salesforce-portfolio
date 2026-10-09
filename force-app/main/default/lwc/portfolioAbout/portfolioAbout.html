@@ -1,0 +1,25 @@
+<template>
+    <section class="section" aria-labelledby="about-title">
+        <div class="container grid">
+            <div class="side">
+                <h2 id="about-title" class="title">About</h2>
+            </div>
+            <div class="body">
+                <div class="intro">
+                    <template for:each={paragraphs} for:item="paragraph">
+                        <p key={paragraph.key}>{paragraph.text}</p>
+                    </template>
+                </div>
+
+                <dl class="pillars">
+                    <template for:each={pillars} for:item="pillar">
+                        <div key={pillar.id} class="pillar">
+                            <dt>{pillar.title}</dt>
+                            <dd>{pillar.body}</dd>
+                        </div>
+                    </template>
+                </dl>
+            </div>
+        </div>
+    </section>
+</template>

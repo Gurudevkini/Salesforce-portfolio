@@ -1,0 +1,32 @@
+@import 'c/portfolioTheme';
+
+:host {
+    background: var(--bg);
+    min-height: 100vh;
+}
+
+.main:focus {
+    outline: none;
+}
+
+/* Keeps anchored sections clear of the 64px sticky header. */
+.anchor {
+    scroll-margin-top: 64px;
+}
+
+.skip {
+    position: absolute;
+    left: 16px;
+    top: -60px;
+    z-index: 100;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: var(--ink);
+    color: var(--bg);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.skip:focus {
+    top: 12px;
+}

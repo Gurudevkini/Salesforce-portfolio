@@ -1,0 +1,63 @@
+<template>
+    <section class="hero" aria-labelledby="hero-name">
+        <div class="container layout">
+            <div class="copy">
+                <p class="status rise r1">{profile.status}</p>
+                <h1 id="hero-name" class="name rise r2">{profile.name}</h1>
+                <p class="role rise r2">{profile.role}</p>
+                <p class="tagline rise r3">{profile.tagline}</p>
+
+                <div class="cta rise r4">
+                    <button class="btn btn-primary" type="button" onclick={showProjects}>
+                        View Projects
+                    </button>
+                    <a
+                        class="btn btn-outline"
+                        href={profile.resumeUrl}
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <c-portfolio-icon name="download"></c-portfolio-icon>
+                        Download Resume
+                    </a>
+                    <button class="btn btn-ghost" type="button" onclick={showContact}>
+                        Contact Me
+                    </button>
+                </div>
+
+                <div class="social rise r4">
+                    <a
+                        class="social-link"
+                        href={profile.githubUrl}
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="GitHub profile"
+                    >
+                        <c-portfolio-icon name="github" size="lg"></c-portfolio-icon>
+                        <span>GitHub</span>
+                    </a>
+                    <a
+                        class="social-link"
+                        href={profile.linkedinUrl}
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="LinkedIn profile"
+                    >
+                        <c-portfolio-icon name="linkedin" size="lg"></c-portfolio-icon>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+
+                <ul class="focus rise r5" aria-label="Focus areas">
+                    <template for:each={focusItems} for:item="item">
+                        <li key={item.key}>{item.label}</li>
+                    </template>
+                </ul>
+            </div>
+
+            <figure class="portrait rise r3">
+                <img src={profile.photoUrl} alt={photoAlt} width="480" height="560" />
+            </figure>
+        </div>
+    </section>
+</template>

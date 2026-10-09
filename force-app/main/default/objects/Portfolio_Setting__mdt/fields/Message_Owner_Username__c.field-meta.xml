@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Message_Owner_Username__c</fullName>
+    <description>Username of the Salesforce user who should own contact-form messages. Required in most orgs because guest users cannot own records.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Message Owner Username</label>
+    <length>80</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

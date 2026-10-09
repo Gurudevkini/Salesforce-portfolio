@@ -1,0 +1,8 @@
+# Salesforce CLI ignore rules
+package.xml
+**/__tests__/**
+**/*.test.js
+**/jsconfig.json
+**/.eslintrc.json
+**/.DS_Store
+jest-stubs/**

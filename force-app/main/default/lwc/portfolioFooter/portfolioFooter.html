@@ -1,0 +1,22 @@
+<template>
+    <footer class="footer">
+        <div class="container bar">
+            <p class="copy">&copy; {year} {profile.name}. Built with Lightning Web Components on Salesforce Experience Cloud.</p>
+            <ul class="links">
+                <li>
+                    <a href={profile.githubUrl} target="_blank" rel="noopener" aria-label="GitHub">
+                        <c-portfolio-icon name="github" size="lg"></c-portfolio-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href={profile.linkedinUrl} target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <c-portfolio-icon name="linkedin" size="lg"></c-portfolio-icon>
+                    </a>
+                </li>
+                <li>
+                    <a class="top" href="#top" onclick={handleTop}>Back to top</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</template>

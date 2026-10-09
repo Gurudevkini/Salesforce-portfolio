@@ -1,0 +1,43 @@
+@import 'c/portfolioTheme';
+
+.groups {
+    border-top: 1px solid var(--rule);
+}
+
+.group {
+    display: grid;
+    gap: 10px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+dt {
+    font-weight: 650;
+}
+
+dd {
+    margin: 0;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill {
+    padding: 4px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+    .group {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 32px;
+        align-items: baseline;
+    }
+}
